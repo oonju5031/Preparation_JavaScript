@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        /*
+        JavaScript의 조건문에서는 관습적으로 0을 false, 0이 아닌 값(문자열 및 빈 문자열 포함)을 true로 간주한다.
+        c04_1 동등 연산에서 1이 true, 그 외의 값이 false인 것과 헷갈리지 않도록 주의.
+        boolean을 수로 치환하는 이 방법을 사용하지 않는 것이 가장 바람직하다.
+        */
+        
+        // 출력된다: 0이 아닌 수는 조건문에서 true
+        if (2) {
+            alert("true");
+        }
+
+        // 출력된다: 문자열은 조건문에서 false
+        if (!"") {
+            alert("빈 문자열");
+        }
+
+        // 출력된다: undefined는 조건문에서 false
+        if (!undefined) {
+            alert("undefined");
+        }
+
+        var a;  // null
+        // 출력된다: null은 조건문에서 false
+        if (!a) {
+            alert("null");
+        }
+
+        // 출력된다: NaN은 조건문에서 false
+        if (!NaN) {
+            alert("NaN");
+        }
+    </script>
+</body>
+</html>

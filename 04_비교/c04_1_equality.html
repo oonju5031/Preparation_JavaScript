@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        console.log(1 == 1);  // true
+        console.log(1 == 2);  // true
+        console.log("one" == "one");  // false
+        console.log("one" == "oneo");  // false
+
+        /*
+        동등연산자 ==와 일치연산자 ===:
+        JavaScript나 PHP의 경우 '=='는 정보의 의미만 동일하면 같은 값으로 인정한다. Java와 다름에 주의.
+        만일 두 객체가 완전히 동일한지 비교하고자 한다면 '==='를 사용하여야 한다.
+        
+        즉 JavaScript에서의 '=='는 Java의 'equals()'와 대응하고,
+        JavaScript에서의 '==='가 Java의 '=='에 대응한다.
+
+        가급적 ===를 사용하도록 하자.
+        */
+        console.log(1 == "1");  // true: 각각 type이 number, string으로 다른 객체지만 의미가 동일하여 true가 반환된다.
+        console.log(1 === "1");  // false: 두 객체가 동일하지 않으므로 false가 반환된다.
+
+        /*
+        null: 값이 없음(undefined와 대동소이하나 JavaScript에선 프로그래머가 고의로 값을 지정하지 않는 경우를 지칭한다.)
+        undefined: 값이 정의되지 않음(선언만 하고 초기화하지 않는 경우는 여기에 해당한다.)
+        */
+        console.log(null == undefined);  // true: 의도하였든 아니든 값이 없는 상태가 동일함
+        console.log(null === undefined);  // false: 의도의 유무에서 명백한 차이가 발생
+
+        /*
+        JavaScript에선 숫자 1을 true로, 그 외의 값을 false로 간주한다.
+        이는 동등연산자 사용 시 true와 1이 동일하다는 것을 의미한다. 단 일치연산자의 경우는 동일하지 않다.
+        */
+        console.log(true == 1);  // true
+        console.log(true == '1');  // true: 값이 1이므로
+        console.log(true == 2);  // false
+        console.log(true === 1);  // false
+
+        /*
+        JavaScript에선 부정을 NaN으로 나타낸다.
+        0을 0으로 나누는 경우가 여기에 해당한다.
+        NaN은 다른 NaN과 동등/일치연산을 하더라도 false가 나온다.
+        */
+       console.log(NaN == NaN);
+
+        /*
+        !=는 ==의 부정, !==는 ===의 부정이다.
+        */
+       console.log(1 != '1');  // false
+       console.log(1 !== '1');  // true
+    </script>
+</body>
+</html>
