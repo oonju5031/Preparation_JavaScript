@@ -33,6 +33,14 @@
         console.log(grade['Jung']);
         console.log(grade.Park);  // 동일한 기능이나 보다 간결함
         console.log(grade['Yo' + 'on'])  // grade[Yoon]과 동일하게 동작함
+
+
+        /*
+        key는 String이므로 quoted가 맞지만, 사용하지 않아도 동일한 결과가 나온다.
+        단, ES3 이하 버전은 이를 용인하지 않으므로 호환성을 위해 가급적 사용할 것.
+        {'Lee' : 85, 'Kim' : 90, 'Ryu' : 75};
+        {Lee : 85, Kim : 90, Ryu : 75};
+        */
     </script>
 </body>
 </html>
