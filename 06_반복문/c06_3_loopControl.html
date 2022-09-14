@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        // var 생략
+        i = 0;
+        j = 0;
+
+        while (true) {
+            if (i === 5) {
+                break;
+            }
+            document.write("break practice " + i + '<br>');
+            i++;
+        }
+
+        while (true) {
+            if (j === 5) {
+                j++;
+                continue;
+            }
+            if (j === 10) {
+                break;
+            }
+            // j = 5일 때만 continue가 작동하여 하단의 'continue practice 5'가 출력되지 않는다.
+            // 즉 while의 나머지 반복문을 처리하지 않고 while의 첫 줄로 돌아가 반복문을 계속 실행한다.
+            document.write("continue practice " + j + '<br>');
+            j++;
+        }
+    </script>
+</body>
+</html>

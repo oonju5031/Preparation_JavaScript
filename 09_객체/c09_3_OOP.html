@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        // 객체 내부엔 다른 객체나 함수를 담을 수도 있다.
+        var grade = {
+            'list' : {'Lee' : 80, 'Kim' : 90, 'Ryu' : 95},
+            'show' : function() {
+                document.write(this.list['Lee'] + '<br>');  // 또는 this.grade.Lee
+            },
+            'showAll' : function() {
+                for (var name in this.list) {
+                    document.write(name + ": " + this.list[name] + '<br>');
+                }
+            }
+        }
+
+        // 객체 {'Lee' : 80, 'Kim' : 90, 'Ryu' : 95}를 출력해야 하므로 JSON.stringfy 사용
+        document.write(JSON.stringify(grade['list']) + '<br>');
+        // 객체 내의 함수를 실행할 땐 다음과 같이 실행하기만 하면 된다.
+        grade['show']();  // 또는 grade.show();
+        grade.showAll();
+
+        
+        // grade.show()와 grade['show']()의 차이는 하단 링크를 참조.
+        // https://medium.com/sjk5766/javascript-object-key-vs-object-key-%EC%B0%A8%EC%9D%B4-3c21eb49b763
+    </script>
+</body>
+</html>

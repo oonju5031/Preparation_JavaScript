@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        for (var i = 1; i < 10; i ++) {
+            for (var j = 1; j < 10; j++) {
+                // 문자열과 숫자가 구문 안에 동시에 있는 경우 숫자는 자동으로 문자열로 변경된다.
+                document.write('i is ' + i + ', j is ' + j + ', ');
+                // 따라서 수의 계산을 위해서는 다음과 같이 i * j를 () 처리하여야 한다.
+                document.write('the product is ' + (i * j) + '<br>');
+            }
+        }
+
+        /*
+        <About Debugging>
+        해당 코드를 실행 후 f12를 눌러 개발자 도구에 들어가면
+        Sources-해당 html 파일-Line number를 클릭한 후 새로고침하여 디버그를 실행할 수 있다.
+        이 경우 우측 breakpoints 탭에 해당 line이 breakpoint로 등록됨과 동시에
+        코드의 실행이 해당 line에서 일시정지된다.
+
+        작업을 재개하고 싶다면 breakpoints 상단의 resume script execution을 클릭하면 되며,
+        해당 버튼 옆의 step 관련 버튼 4종을 통해 작업을 한 줄씩 제어할 수 있다.
+
+        디버깅을 단계별로 진행하며 Scope-Global을 통해 해당 단계의 모든 변수를 볼 수 있으며,
+        Watch Expression 탭에 변수명을 등록하여 선택한 변수만을 보는 것도 가능하다.
+
+        <About Debugging: Step>
+            Step: 다음 명령어를 실행한다.
+            Step over next function: 다음 명령어를 실행하되, 함수(내장함수가 아닌 직접 작성한 함수) 내부로 들어가지 않는다.
+                                     즉 중첩 함수를 실행하되 이를 표기하지 않는다.
+            Step into next function: Step과 동일하나, 비동기 함수의 경우 Step은 비동기 동작을 무시하는 반면 해당 동작은 이를 수행한다.
+                                     필요한 경우 비동기 동작이 왼료될 때까지 대기한다.
+            Step out of current function: 함수 본문 마지막 줄에 이를 때까지 계속 실행한다.
+
+        참고: https://www.youtube.com/watch?v=tS_kELn3m9U&list=PLuHgQVnccGMA4uSig3hCjl7wTDeyIeZVU&index=27
+        */
+    </script>
+</body>
+</html>

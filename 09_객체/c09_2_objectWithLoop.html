@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        // 객체는 배열과 달리 순서를 가지지 않고, 이를 key(index)와 value(element)로 대체한다.
+        var score = {Lee : 85, Kim : 90, Ryu : 75};
+        // 'Lee'로 입력하든 Lee로 입력하든 동일한 결과가 나오는데, 차이가 무엇인지 궁금함.
+
+        // key를 일괄 출력
+        for (i in score) {
+            document.write(i + '<br>');
+        }
+        // value를 일괄 출력
+        for (i in score) {
+            document.write(score[i] + '<br>');
+        }
+        // 응용
+        for (key in score) {
+            document.write("key: " + key + ", Value: " + score[key] + '<br>');
+
+        }
+
+        // for (var i in arr) {}은 배열에서도 사용 가능하다.
+    </script>
+</body>
+</html>

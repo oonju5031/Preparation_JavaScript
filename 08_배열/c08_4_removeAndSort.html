@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        var arr = ['a', 'b', 'c', 'd', 'e'];
+
+        // 제일 앞의 데이터를 제거
+        arr.shift();
+        document.write(arr + '<br>');  // bcde
+
+        // 제일 뒤의 원소를 제거
+        arr.pop();
+        document.write(arr + '<br>');  // bcd
+
+
+        var arr2 = ['c', 'e', 'd', 'b', 'a'];
+
+        // 오름차순 정렬
+        arr2.sort();
+        document.write(arr2 + '<br>');  // abcde
+
+        // 내림차순 정렬
+        arr2.reverse();
+        document.write(arr2 + '<br>');  // edcba
+
+        // 필요한 경우 sort함수의 여러 생성자를 통해 정렬의 우선순위를 정할 수 있다.
+    </script>
+</body>
+</html>

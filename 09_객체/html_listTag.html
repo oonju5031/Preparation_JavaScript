@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        <li></li>태그는 list의 약자로 목록을 만드는 데 사용한다.
+        단독으로 사용되지 않으며, <ul></ul> 또는 <ol></ol>태그 내에서 동작한다.
+        ul은 unordered list로 번호가 매겨지지 않은 목록이며,
+        ol은 ordered list로 번호가 매겨진 목록이다.
+    -->
+    <ol>
+        <li>목록1</li>
+        <li>목록2</li>
+    </ol>
+
+    <ul>
+        <li>중첩목록1</li>
+        <li>중첩목록2</li>
+        <ol>
+            <li>내부목록1</li>
+            <li>내부목록2</li>
+        </ol>
+    </ul>
+
+    <ul>
+        <script type = "text/javascript">
+            var score = {'Lee': 85, 'Kim': 90, 'Ryu': 75};
+
+            for (key in score) {
+                // <li>와 </li>를 추가, <br>을 제거하였다.
+                document.write("<li>key: " + key + ", Value: " + score[key] + "</li>");
+            }
+        </script>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        /*
+        객체는 타 언어의 연관배열(associative array), 맵(map), 딕셔너리(dictionary) 등에 해당하며
+        배열이 원소(element; item)에 대한 식별자(index)로 0부터 시작하는 숫자를 자동으로 만들어 사용했다면
+        객체는 식별자를 임의로 설정해 문자 등을 사용할 수 있다.
+        */
+
+        // 값을 가지고 초기화된 객체
+        var score = {'Lee' : 85, 'Kim' : 90, 'Ryu' : 75};
+        console.log(score);
+        // 객체는 alert() 또는 document.write()로 실행할 경우 [object Object]만 출력된다.
+        // 이를 정상적으로 출력하고 싶다면 alert(JSON.stringify(score))를 사용하면 된다.
+        alert(JSON.stringify(score));
+
+        // 빈 객체에 원소를 추가
+        var grade = {};  // var grade = new Object();와 동일
+        grade['Jung'] = 1;
+        grade['Yoon'] = 4;
+        grade['Park'] = 3;
+        grade['Choi'] = 1;
+        console.log(grade);
+
+        // 객체의 값을 불러오기
+        console.log(grade['Jung']);
+        console.log(grade.Park);  // 동일한 기능이나 보다 간결함
+        console.log(grade['Yo' + 'on'])  // grade[Yoon]과 동일하게 동작함
+    </script>
+</body>
+</html>
