@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include jquery.js -->
+    <script type = "text/javascript" src = "jquery.js"></script>
+</head>
+<body>
+    <ul id = "list">
+        <li> empty </li>
+        <li> empty </li>
+        <li> empty </li>
+        <li> empty </li>
+    </ul>
+    <input type = "button" value = "execute" id = "execute_button" />
+    <script type = "text/javascript">
+        // Library는 자주 사용되는 로직을 재사용하기 편리하도록 정리한 일련의 집합이다.
+        // 해당 코드에선 Jquery 라이브러리를 응용한다.
+        $('#execute_button').click(function() {
+            $('#list li').text('Library Test');
+        })
+    </script>
+</body>
+</html>
