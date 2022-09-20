@@ -23,7 +23,12 @@
 
         // 객체 {'Lee' : 80, 'Kim' : 90, 'Ryu' : 95}를 출력해야 하므로 JSON.stringfy 사용
         document.write(JSON.stringify(grade['list']) + '<br>');
-        // 객체 내의 함수를 실행할 땐 다음과 같이 실행하기만 하면 된다.
+
+        /*
+        c07_3_ect.html의 example()함수를 참조:
+        example = function () {}를 실행할 때 example 대신 example()로 했던 것과 대응된다.
+        다시 말해 grade.['show']가 example에 대응하므로, 뒤에 ()를 붙여서 실행하여야 한다.
+        */
         grade['show']();  // 또는 grade.show();
         grade.showAll();
 
